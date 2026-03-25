@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useExpenses } from '@/hooks/useExpenses';
 import { useGameState } from '@/hooks/useGameState';
 import { CATEGORIES } from '@/lib/store';
-import { Trash2 } from 'lucide-react';
+import { TrashSimple } from '@phosphor-icons/react';
 import { motion } from 'framer-motion';
 
 export function ExpensesView() {
@@ -243,7 +243,7 @@ export function ExpensesView() {
                         onClick={() => handleDelete(e.id)}
                         disabled={deletingId === e.id}
                       >
-                        <Trash2 className={`w-4 h-4 hover:text-red-500 ${deletingId === e.id ? 'opacity-50' : ''}`} />
+                        <TrashSimple className={`w-4 h-4 hover:text-red-500 ${deletingId === e.id ? 'opacity-50' : ''}`} />
                       </button>
                     </td>
                   </tr>

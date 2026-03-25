@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Send } from 'lucide-react';
+import { XCircle, PaperPlaneRight } from '@phosphor-icons/react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { getLevelName } from '@/lib/store';
@@ -144,7 +144,7 @@ export function PushkaraChatModal({ open, onClose, user, todayTotal = 0, streak 
                 </div>
               </div>
               <button onClick={onClose} className="text-muted-foreground hover:text-foreground">
-                <X className="w-5 h-5" />
+                <XCircle className="w-5 h-5" />
               </button>
             </div>
 
@@ -187,7 +187,7 @@ export function PushkaraChatModal({ open, onClose, user, todayTotal = 0, streak 
                 className="bg-muted border-border"
               />
               <Button onClick={send} size="icon" className="bg-primary text-primary-foreground shrink-0">
-                <Send className="w-4 h-4" />
+                <PaperPlaneRight className="w-4 h-4" />
               </Button>
             </div>
           </motion.div>

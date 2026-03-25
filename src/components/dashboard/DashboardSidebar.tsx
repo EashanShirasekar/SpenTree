@@ -5,26 +5,26 @@ import { useGameState } from '@/hooks/useGameState';
 import type { DashboardView } from '@/pages/Dashboard';
 
 import {
-  TreePine,
+  TreeEvergreen,
   Receipt,
   PiggyBank,
-  BarChart3,
-  Award,
-  Settings,
-  LogOut,
-  MessageCircle,
-  CalendarDays,
-  User
-} from 'lucide-react';
+  ChartBar,
+  Medal,
+  GearSix,
+  SignOut,
+  ChatCircleDots,
+  CalendarDots,
+  UserCircle
+} from '@phosphor-icons/react';
 
 const NAV_ITEMS: { id: DashboardView; label: string; icon: React.ElementType }[] = [
-  { id: 'forest', label: 'Forest', icon: TreePine },
+  { id: 'forest', label: 'Forest', icon: TreeEvergreen },
   { id: 'expenses', label: 'Expenses', icon: Receipt },
   { id: 'savings', label: 'Savings', icon: PiggyBank },
-  { id: 'insights', label: 'Insights', icon: BarChart3 },
-  { id: 'calendar', label: 'Calendar', icon: CalendarDays },
-  { id: 'profile', label: 'Profile', icon: User },
-  { id: 'badges', label: 'Badges', icon: Award },
+  { id: 'insights', label: 'Insights', icon: ChartBar },
+  { id: 'calendar', label: 'Calendar', icon: CalendarDots },
+  { id: 'profile', label: 'Profile', icon: UserCircle },
+  { id: 'badges', label: 'Badges', icon: Medal },
 ];
 
 interface Props {
@@ -105,7 +105,7 @@ export function DashboardSidebar({ activeView, setActiveView, onChatOpen }: Prop
           onClick={onChatOpen}
           className="w-full flex items-center justify-center gap-1 px-2 py-2 text-xs rounded-md bg-primary/10 hover:bg-primary/20"
         >
-          <MessageCircle className="w-4 h-4" />
+          <ChatCircleDots className="w-4 h-4" />
           AI
         </button>
       </div>
@@ -117,7 +117,7 @@ export function DashboardSidebar({ activeView, setActiveView, onChatOpen }: Prop
           onClick={() => setActiveView('settings')}
           className="w-full flex items-center gap-2 px-2 py-2 rounded-md text-xs text-muted-foreground hover:bg-muted hover:text-foreground"
         >
-          <Settings className="w-4 h-4" />
+          <GearSix className="w-4 h-4" />
           Settings
         </button>
 
@@ -128,7 +128,7 @@ export function DashboardSidebar({ activeView, setActiveView, onChatOpen }: Prop
           }}
           className="w-full flex items-center gap-2 px-2 py-2 rounded-md text-xs text-muted-foreground hover:text-destructive hover:bg-muted"
         >
-          <LogOut className="w-4 h-4" />
+          <SignOut className="w-4 h-4" />
           Logout
         </button>
 
